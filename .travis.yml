@@ -5,6 +5,11 @@ os:
 - osx
 - windows
 
+addons:
+  apt:
+   packages:
+   - xorg-dev
+
 rust:
 - stable
 
