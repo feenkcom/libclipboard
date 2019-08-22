@@ -9,6 +9,8 @@ addons:
   apt:
    packages:
    - xorg-dev
+   - libxcb-shape0-dev
+   - libxcb-xfixes0-dev
 
 rust:
 - stable
