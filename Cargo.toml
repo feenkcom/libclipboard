@@ -1,0 +1,19 @@
+[package]
+name = "libclipboard"
+version = "0.1.0"
+authors = ["Aliaksei Syrel <alex.syrel@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+clipboard = "0.5.0"
+libc = "0.2.62"
+
+[lib]
+name = "Clipboard"
+crate-type = ["cdylib"]
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
