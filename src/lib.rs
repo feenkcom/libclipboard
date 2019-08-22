@@ -14,6 +14,11 @@ use clipboard::ClipboardContext;
 use cstruct::*;
 
 #[no_mangle]
+pub fn clipboard_test() -> bool {
+    return true
+}
+
+#[no_mangle]
 pub fn clipboard_create_clipboard_context() -> *mut ClipboardContext {
     CBox::into_raw(ClipboardProvider::new().unwrap())
 }
