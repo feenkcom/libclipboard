@@ -31,7 +31,12 @@ pub fn clipboard_destroy_clipboard_context(_ptr: *mut ClipboardContext) {
 #[no_mangle]
 pub fn clipboard_get_contents(_ptr_context: *mut ClipboardContext) -> *mut c_char {
     CBox::with_raw(_ptr_context, |context| {
-        let contents_string = context.get_contents().unwrap();
+        let contents_string: String = match context.get_contents() {
+            Ok(_string) => { _string },
+            Err(e) => {
+                eprintln!("[Clipboard] Error while getting a content {:?}", e);
+                "".to_string() }
+        };
         let c_to_print = CString::new(contents_string).expect("CString::new failed");
         c_to_print.into_raw()
     })
