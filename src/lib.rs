@@ -2,16 +2,14 @@
 
 extern crate clipboard;
 extern crate libc;
+extern crate boxer;
 
-pub mod cstruct;
+use boxer::CBox;
 
 use std::os::raw::c_char;
-use std::ffi::CString;
-use std::ffi::CStr;
 
 use clipboard::ClipboardProvider;
 use clipboard::ClipboardContext;
-use cstruct::*;
 
 #[no_mangle]
 pub fn clipboard_test() -> bool {
@@ -37,22 +35,19 @@ pub fn clipboard_get_contents(_ptr_context: *mut ClipboardContext) -> *mut c_cha
                 eprintln!("[Clipboard] Error while getting a content {:?}", e);
                 "".to_string() }
         };
-        let c_to_print = CString::new(contents_string).expect("CString::new failed");
-        c_to_print.into_raw()
+        CBox::to_chars(contents_string)
     })
 }
 
 #[no_mangle]
 pub fn clipboard_free_contents(_ptr_contents: *mut c_char) {
-    unsafe { CString::from_raw(_ptr_contents) };
+    CBox::free_chars(_ptr_contents)
 }
 
 #[no_mangle]
 pub fn clipboard_set_contents(_ptr_context: *mut ClipboardContext, _ptr_contents: *const c_char) {
     CBox::with_raw(_ptr_context, |context| {
-        let contents_string = unsafe {
-            CStr::from_ptr(_ptr_contents).to_string_lossy().into_owned()
-        };
+        let contents_string = CBox::to_string(_ptr_contents);
         match context.set_contents(contents_string) {
             Ok(_) => {},
             Err(e) => { eprintln!("[Clipboard] Error while setting a content {:?}", e) },

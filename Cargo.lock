@@ -6,6 +6,11 @@ version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "boxer"
+version = "0.1.0"
+source = "git+https://github.com/feenkcom/libboxer#d5be6101d1419e82b4aa731fb8e3509f088c4c7f"
+
+[[package]]
 name = "cfg-if"
 version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -39,6 +44,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 name = "libclipboard"
 version = "0.1.0"
 dependencies = [
+ "boxer 0.1.0 (git+https://github.com/feenkcom/libboxer)",
  "clipboard 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "libc 0.2.62 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -123,6 +129,7 @@ dependencies = [
 
 [metadata]
 "checksum block 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)" = "0d8c1fef690941d3e7788d328517591fecc684c084084702d6ff1641e993699a"
+"checksum boxer 0.1.0 (git+https://github.com/feenkcom/libboxer)" = "<none>"
 "checksum cfg-if 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)" = "b486ce3ccf7ffd79fdeb678eac06a9e6c09fc88d33836340becb8fffe87c5e33"
 "checksum clipboard 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)" = "25a904646c0340239dcf7c51677b33928bf24fdf424b79a57909c0109075b2e7"
 "checksum clipboard-win 2.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "e3a093d6fed558e5fe24c3dfc85a68bb68f1c824f440d3ba5aca189e2998786b"
