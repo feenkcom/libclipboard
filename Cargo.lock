@@ -8,7 +8,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "boxer"
 version = "0.1.0"
-source = "git+https://github.com/feenkcom/gtoolkit-boxer#c94716113ace7a2cd2092dfa6ab5c151f7fb300a"
+source = "git+https://github.com/feenkcom/gtoolkit-boxer#a79c7153508338dc835914cc955adeb480d5cffb"
 
 [[package]]
 name = "cfg-if"
