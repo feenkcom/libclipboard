@@ -8,7 +8,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "boxer"
 version = "0.1.0"
-source = "git+https://github.com/feenkcom/gtoolkit-boxer#f07278d366227fddd36796ea4ff3007f7056b0bf"
+source = "git+https://github.com/feenkcom/gtoolkit-boxer?rev=a79e2fd8003527ac52ddb7bc9968e5e7ead70448#a79e2fd8003527ac52ddb7bc9968e5e7ead70448"
+dependencies = [
+ "widestring 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
+]
 
 [[package]]
 name = "cfg-if"
@@ -44,7 +47,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 name = "libclipboard"
 version = "0.1.0"
 dependencies = [
- "boxer 0.1.0 (git+https://github.com/feenkcom/gtoolkit-boxer)",
+ "boxer 0.1.0 (git+https://github.com/feenkcom/gtoolkit-boxer?rev=a79e2fd8003527ac52ddb7bc9968e5e7ead70448)",
  "clipboard 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -91,6 +94,11 @@ dependencies = [
 ]
 
 [[package]]
+name = "widestring"
+version = "0.4.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
 name = "winapi"
 version = "0.3.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -128,7 +136,7 @@ dependencies = [
 
 [metadata]
 "checksum block 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)" = "0d8c1fef690941d3e7788d328517591fecc684c084084702d6ff1641e993699a"
-"checksum boxer 0.1.0 (git+https://github.com/feenkcom/gtoolkit-boxer)" = "<none>"
+"checksum boxer 0.1.0 (git+https://github.com/feenkcom/gtoolkit-boxer?rev=a79e2fd8003527ac52ddb7bc9968e5e7ead70448)" = "<none>"
 "checksum cfg-if 0.1.10 (registry+https://github.com/rust-lang/crates.io-index)" = "4785bdd1c96b2a846b2bd7cc02e86b6b3dbf14e7e53446c4f54c92a361040822"
 "checksum clipboard 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)" = "25a904646c0340239dcf7c51677b33928bf24fdf424b79a57909c0109075b2e7"
 "checksum clipboard-win 2.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "e3a093d6fed558e5fe24c3dfc85a68bb68f1c824f440d3ba5aca189e2998786b"
@@ -138,6 +146,7 @@ dependencies = [
 "checksum objc 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)" = "915b1b472bc21c53464d6c8461c9d3af805ba1ef837e1cac254428f4a77177b1"
 "checksum objc-foundation 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "1add1b659e36c9607c7aab864a76c7a4c2760cd0cd2e120f3fb8b952c7e22bf9"
 "checksum objc_id 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "c92d4ddb4bd7b50d730c215ff871754d0da6b2178849f8a2a2ab69712d0c073b"
+"checksum widestring 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)" = "a763e303c0e0f23b0da40888724762e802a8ffefbc22de4127ef42493c2ea68c"
 "checksum winapi 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)" = "8093091eeb260906a183e6ae1abdba2ef5ef2257a21801128899c3fc699229c6"
 "checksum winapi-i686-pc-windows-gnu 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ac3b87c63620426dd9b991e5ce0329eff545bccbbb34f3be09ff6fb6ab51b7b6"
 "checksum winapi-x86_64-pc-windows-gnu 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"

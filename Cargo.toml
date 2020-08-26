@@ -6,7 +6,7 @@ edition = "2018"
 
 [dependencies]
 clipboard = "0.5.0"
-boxer = { git = "https://github.com/feenkcom/gtoolkit-boxer" }
+boxer = { git = "https://github.com/feenkcom/gtoolkit-boxer", rev = "a79e2fd8003527ac52ddb7bc9968e5e7ead70448" }
 
 [lib]
 name = "Clipboard"
