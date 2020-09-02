@@ -2,7 +2,7 @@
 extern crate boxer;
 extern crate clipboard;
 
-use boxer::boxes::{ValueBox, ValueBoxPointer};
+use boxer::{ValueBox, ValueBoxPointer, ValueBoxPointerReference};
 use boxer::string::BoxerString;
 use clipboard::ClipboardContext;
 use clipboard::ClipboardProvider;
@@ -21,8 +21,8 @@ pub fn clipboard_create_clipboard_context() -> *mut ValueBox<ClipboardContext> {
 }
 
 #[no_mangle]
-pub fn clipboard_destroy_clipboard_context(ptr: *mut ValueBox<ClipboardContext>) {
-    ptr.drop()
+pub fn clipboard_destroy_clipboard_context(ptr: &mut *mut ValueBox<ClipboardContext>) {
+    ptr.drop();
 }
 
 #[no_mangle]
