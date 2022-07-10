@@ -1,11 +1,11 @@
 #![allow(non_snake_case)]
 extern crate boxer;
-extern crate clipboard;
+extern crate copypasta;
 
 use boxer::{ValueBox, ValueBoxPointer, ValueBoxPointerReference};
 use boxer::string::BoxerString;
-use clipboard::ClipboardContext;
-use clipboard::ClipboardProvider;
+use copypasta::ClipboardContext;
+use copypasta::ClipboardProvider;
 
 #[no_mangle]
 pub fn clipboard_test() -> bool {
@@ -14,7 +14,7 @@ pub fn clipboard_test() -> bool {
 
 #[no_mangle]
 pub fn clipboard_create_clipboard_context() -> *mut ValueBox<ClipboardContext> {
-    match ClipboardProvider::new() {
+    match ClipboardContext::new() {
         Ok(clipboard_provider) => ValueBox::new(clipboard_provider).into_raw(),
         Err(_) => std::ptr::null_mut(),
     }

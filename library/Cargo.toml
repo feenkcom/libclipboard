@@ -1,0 +1,13 @@
+[package]
+name = "libclipboard"
+version = "0.2.0"
+authors = ["feenk gmbh <contact@feenk.com>"]
+edition = "2021"
+
+[dependencies]
+copypasta = "0.8.1"
+boxer = { git = "https://github.com/feenkcom/gtoolkit-boxer" }
+
+[lib]
+name = "Clipboard"
+crate-type = ["cdylib"]
