@@ -6,7 +6,8 @@ edition = "2021"
 
 [dependencies]
 copypasta = "0.8.1"
-boxer = { git = "https://github.com/feenkcom/gtoolkit-boxer" }
+value-box = "1.0"
+string-box = "1.1"
 
 [lib]
 name = "Clipboard"

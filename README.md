@@ -1,2 +1,2 @@
-# libClipboard ![](https://github.com/feenkcom/libclipboard/workflows/Cargo%20Build/badge.svg)
+# libClipboard
 C wrapper for the rust-clipboard library
