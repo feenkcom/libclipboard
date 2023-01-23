@@ -30,11 +30,9 @@ pub fn clipboard_get_contents(
     contents: *mut ValueBox<StringBox>,
 ) {
     contents
-        .to_ref()
-        .and_then(|mut contents| {
+        .with_mut(|contents| {
             context
-                .to_ref()
-                .and_then(|mut context| {
+                .with_mut(|context| {
                     context
                         .get_contents()
                         .map_err(|error| BoxerError::AnyError(error))
@@ -50,9 +48,8 @@ pub fn clipboard_set_contents(
     contents: *mut ValueBox<StringBox>,
 ) {
     contents
-        .to_ref()
-        .and_then(|contents| {
-            context.to_ref().and_then(|mut context| {
+        .with_ref(|contents| {
+            context.with_mut(|context| {
                 context
                     .set_contents(contents.to_string())
                     .map_err(|error| BoxerError::AnyError(error))
