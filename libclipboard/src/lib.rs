@@ -1,9 +1,13 @@
 #![allow(non_snake_case)]
+#![allow(incomplete_features)]
+#![feature(specialization)]
 
 #[macro_use]
 extern crate phlow;
 extern crate phlow_extensions;
 extern crate phlow_ffi;
+#[macro_use]
+extern crate value_box;
 extern crate value_box_ffi;
 
 use phlow_extensions::CoreExtensions;
@@ -13,8 +17,10 @@ pub use phlow_ffi::*;
 pub use value_box_ffi::*;
 
 mod clipboard_context;
+mod clipboard_extensions;
 
-import_extensions!(CoreExtensions);
+define_extensions!(ClipboardExtensions);
+import_extensions!(CoreExtensions, ClipboardExtensions);
 
 #[no_mangle]
 pub fn clipboard_test() -> bool {

@@ -6,14 +6,14 @@ use value_box::{BoxerError, ReturnBoxerResult, ValueBox, ValueBoxPointer};
 #[no_mangle]
 pub fn clipboard_create_clipboard_context() -> *mut ValueBox<ClipboardContext> {
     match ClipboardContext::new() {
-        Ok(clipboard_provider) => ValueBox::new(clipboard_provider).into_raw(),
+        Ok(clipboard_provider) => value_box!(clipboard_provider).into_raw(),
         Err(_) => std::ptr::null_mut(),
     }
 }
 
 #[no_mangle]
-pub fn clipboard_destroy_clipboard_context(ptr: *mut ValueBox<ClipboardContext>) {
-    ptr.release();
+pub fn clipboard_destroy_clipboard_context(context: *mut ValueBox<ClipboardContext>) {
+    context.release();
 }
 
 #[no_mangle]
