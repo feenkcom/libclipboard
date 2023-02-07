@@ -436,9 +436,9 @@ dependencies = [
 
 [[package]]
 name = "phlow-ffi"
-version = "1.0.1"
+version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bdef8edf0ec3a60beb89b0a05b8f326ae99bf97b12302b241f3f7d4a71ba225f"
+checksum = "eee142fd07d61f8a231f1eed184da4d7fd6b38188a9aa95d7f2c7daed32d0056"
 dependencies = [
  "phlow",
  "string-box",
@@ -804,9 +804,9 @@ checksum = "07a91d0648d862a02d641c82292791accfe66d36df75d8149ebc9768f2e36863"
 
 [[package]]
 name = "value-box"
-version = "2.2.3"
+version = "2.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "149a442dec280def3c266923a9e5c105fd501ad48df242b6c34c4e9bec501345"
+checksum = "95d27cbe738382b61bda15e558e7715a56997c0c45260c4cc62f40cbf1755f64"
 dependencies = [
  "log",
  "phlow",
@@ -816,9 +816,9 @@ dependencies = [
 
 [[package]]
 name = "value-box-ffi"
-version = "1.1.1"
+version = "1.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f04f0d852bba02e460e87ea10e6935f2bb91f799f71dea757f2a728578109b3d"
+checksum = "88b4ab4ee8c69d4b7ff33d892ee338a2aef36449410356311b6e3865190ecd6f"
 dependencies = [
  "phlow",
  "phlow-extensions",
