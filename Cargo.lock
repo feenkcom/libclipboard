@@ -367,9 +367,9 @@ checksum = "2dffe52ecf27772e601905b7522cb4ef790d2cc203488bbd0e2fe85fcb74566d"
 
 [[package]]
 name = "memmap2"
-version = "0.5.8"
+version = "0.5.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4b182332558b18d807c4ce1ca8ca983b34c3ee32765e47b3f0f69b90355cc1dc"
+checksum = "83faa42c0a078c393f6b29d5db232d8be22776a891f8f56e5284faee4a20b327"
 dependencies = [
  "libc",
 ]
@@ -448,9 +448,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.17.0"
+version = "1.17.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6f61fba1741ea2b3d6a1e3178721804bb716a68a6aeba1149b5d52e3d464ea66"
+checksum = "b7e5500299e16ebb147ae15a00a942af264cf3688f47923b8fc2cd5858f23ad3"
 
 [[package]]
 name = "os_str_bytes"
@@ -647,8 +647,8 @@ dependencies = [
 
 [[package]]
 name = "shared-library-builder"
-version = "0.3.8"
-source = "git+https://github.com/feenkcom/shared-library-builder-rs#edad72ccfa213c958480c67f8544965309ed1154"
+version = "0.4.0"
+source = "git+https://github.com/feenkcom/shared-library-builder-rs#a5a5d9e1410cd1af320ea0708414f01339b6efe2"
 dependencies = [
  "clap",
  "file-matcher",
@@ -736,9 +736,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "1.0.107"
+version = "1.0.109"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1f4064b5b16e03ae50984a5a8ed5d4f8803e6bc1fd170a3cda91a1be4b18e3f5"
+checksum = "72b64191b275b66ffe2469e8af2c1cfe3bafa67b529ead792a6d0160888b4237"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -877,9 +877,9 @@ dependencies = [
 
 [[package]]
 name = "value-box-ffi"
-version = "1.1.2"
+version = "1.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "88b4ab4ee8c69d4b7ff33d892ee338a2aef36449410356311b6e3865190ecd6f"
+checksum = "f26dc8e7a34c6d7e7dc832964de89d235c9890a7591893396137313f57ff285b"
 dependencies = [
  "phlow",
  "phlow-extensions",
